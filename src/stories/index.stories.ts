@@ -3,7 +3,6 @@ import { withNotes } from '@storybook/addon-notes';
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 import { AgGridModule } from 'ag-grid-angular';
-// import { AgGridNg2 } from 'ag-grid-angular';
 
 import { Order } from '../app/domain/order';
 import { OrderListComponent } from '../app/order-list/order-list.component';
@@ -34,8 +33,7 @@ const orders: Order[] = [
 storiesOf('Order List', module)
     .addDecorator(
         moduleMetadata({
-          declarations: [AgGridModule]
-          // declarations: [AgGridNg2]
+            imports: [AgGridModule.withComponents([])]
         })
     )
     .add('empty list', () => ({
