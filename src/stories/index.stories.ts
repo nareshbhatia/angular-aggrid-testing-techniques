@@ -1,8 +1,5 @@
+import { AgGridModule } from '@ag-grid-community/angular';
 import { storiesOf, moduleMetadata } from '@storybook/angular';
-import { withNotes } from '@storybook/addon-notes';
-import { action } from '@storybook/addon-actions';
-import { linkTo } from '@storybook/addon-links';
-import { AgGridModule } from 'ag-grid-angular';
 
 import { Order } from '../app/domain/order';
 import { OrderListComponent } from '../app/order-list/order-list.component';
@@ -45,6 +42,6 @@ storiesOf('Order List', module)
     .add('list with orders', () => ({
         component: OrderListComponent,
         props: {
-            orders: orders
+            orders
         }
     }));
